@@ -27,7 +27,7 @@ class Demo:
         botton = Tkinter.Button(parent, text='compare', command=self.compare_phone)
         botton.pack()
         self.t = Tkinter.Text(parent)
-
+        self.t.pack()
     def get_phone(self, phone):
         self.phone_1 = phone
     def get_phone2(self, phone):
