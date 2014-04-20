@@ -3,7 +3,7 @@ import sys
 import nltk
 from nltk.tokenize import word_tokenize, wordpunct_tokenize, sent_tokenize
 from nltk.tag import pos_tag
-
+# atrrbute list, we can set for more attributes
 cellphone_attribute = ['screen','price', 'battery', 'phone']
 
 def filter_with_attribution():
@@ -11,8 +11,11 @@ def filter_with_attribution():
 
 def process(phone_name, comment_file, score_dict_file):
     try:
+        # extract tags for comment files
         result = extract_tags(comment_file)
+        # load score dict
         score_dict = load_score_dict(score_dict_file)
+        # get the socre result
         score_result = get_score(result, score_dict)
         tmp_str = phone_name
         for m in score_result:

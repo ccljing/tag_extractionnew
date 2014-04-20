@@ -16,6 +16,7 @@ def process():
         for i in range(0,len(result)):
             term = result[i][0]
             attr = result[i][1]
+            # we just focus on the noun terms
             if attr == "NN":
                 valid.append(term)
     freq_dist = nltk.FreqDist(w.lower() for w in valid)
